@@ -213,8 +213,9 @@ const sectionRevealObserver = new IntersectionObserver((entries) => {
   });
 }, {
   threshold: 0,
-  // Trigger 320px BEFORE section enters viewport so content is ready when it arrives
-  rootMargin: '0px 0px 320px 0px'
+  // Fire when section is 20% into the viewport (prevents firing on page load
+  // for #about which is already 16% visible due to 84vh hero height)
+  rootMargin: '0px 0px -20% 0px'
 });
 
 // Exclude #home — hero uses its own CSS keyframe animations
@@ -229,7 +230,7 @@ window.addEventListener('scroll', () => {
   clearTimeout(revealSweepTimer);
   revealSweepTimer = setTimeout(() => {
     document.querySelectorAll('section:not(#home)').forEach(s => {
-      if (s.getBoundingClientRect().top < window.innerHeight + 60) {
+      if (s.getBoundingClientRect().top < window.innerHeight * 0.70) {
         revealSection(s, true);
         sectionRevealObserver.unobserve(s);
       }
