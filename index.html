@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kitobo Serenity Resort</title>
+  <link rel="icon" type="image/png" href="images/logo.png" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- PRELOADER -->
+  <div id="preloader">
+    <div class="preloader-inner">
+      <img src="images/logo.png" alt="Kitobo Serenity Resort" class="preloader-logo" />
+      <div class="preloader-bar"><div class="preloader-fill"></div></div>
+      <p>Kitobo Serenity Resort</p>
+    </div>
+  </div>
+
+  <!-- NAVIGATION -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo">
+        <img src="images/logo.png" alt="Kitobo Serenity Resort Logo" />
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#accommodations" class="nav-link">Accommodations</a></li>
+        <li><a href="#bar-restaurant" class="nav-link">Bar &amp; Restaurant</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li>
+          <a href="https://kitoboserenity-production.up.railway.app/booking" target="_blank" class="nav-book-btn">Book Now</a>
+        </li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HOME / HERO -->
+  <section id="home" class="hero">
+    <div class="hero-slider" id="heroSlider">
+      <div class="hero-slide active" style="background-image: url('images/exterior 2.jpg')"></div>
+      <div class="hero-slide" style="background-image: url('images/exterior 3.jpg')"></div>
+      <div class="hero-slide" style="background-image: url('images/restaurant.jpg')"></div>
+      
+      <div class="hero-slide" style="background-image: url('images/exterior 4.jpg')"></div>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="hero-tag">Welcome to</span>
+      <h1 class="hero-title">Kitobo Serenity<br /><span>Resort</span></h1>
+      <p class="hero-subtitle">Where nature meets luxury — nestled at the foot of Mount Meru, Tanzania</p>
+      <div class="hero-cta">
+        <a href="https://kitoboserenity-production.up.railway.app/booking" target="_blank" class="btn btn-primary">Book Your Stay</a>
+        <a href="#accommodations" class="btn btn-outline">Explore Rooms</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll Down</span>
+      <div class="scroll-arrow"></div>
+    </div>
+    <div class="hero-dots" id="heroDots">
+      <span class="hero-dot active" data-index="0"></span>
+      <span class="hero-dot" data-index="1"></span>
+      <span class="hero-dot" data-index="2"></span>
+      <span class="hero-dot" data-index="3"></span>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-images reveal-left">
+          <div class="about-img-main">
+            <img src="images/interior.jpeg" alt="Kitobo Resort Interior" />
+          </div>
+          <div class="about-img-secondary">
+            <img src="images/reception.jpeg" alt="Reception" />
+          </div>
+          <div class="about-badge">
+            <span class="badge-icon">&#127968;</span>
+            <strong>Premium</strong>
+            <small>Hospitality</small>
+          </div>
+        </div>
+        <div class="about-text reveal-right">
+          <span class="section-tag">About Us</span>
+          <h2 class="section-title">A Sanctuary of Serenity &amp; Comfort</h2>
+          <p>Kitobo Serenity Resort is a luxury boutique retreat nestled in the heart of Arusha, Tanzania — offering breathtaking views of Mount Meru, lush natural surroundings, and world-class hospitality.</p>
+          <p>Whether you're here for business or leisure, our resort provides an unmatched blend of comfort, elegance, and authentic Tanzanian warmth. From our beautifully appointed rooms to our vibrant bar and restaurant, every detail is crafted to exceed your expectations.</p>
+          <div class="about-stats">
+            <div class="stat">
+              <strong data-count="3" data-suffix="+">3+</strong>
+              <small>Room Types</small>
+            </div>
+            <div class="stat">
+              <strong>24/7</strong>
+              <small>Guest Service</small>
+            </div>
+            <div class="stat">
+              <strong data-count="100" data-suffix="%">100%</strong>
+              <small>Satisfaction</small>
+            </div>
+          </div>
+          <a href="#accommodations" class="btn btn-primary">View Rooms</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACCOMMODATIONS -->
+  <section id="accommodations" class="accommodations section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Our Rooms</span>
+        <h2 class="section-title">Accommodations</h2>
+        <p class="section-subtitle">Choose from our carefully designed rooms, each offering a unique blend of comfort and elegance.</p>
+      </div>
+
+      <div class="rooms-grid">
+
+        <!-- STANDARD ROOM -->
+        <div class="room-card reveal" data-delay="0">
+          <div class="room-card-inner">
+            <div class="room-image-wrap">
+              <div class="room-carousel" data-room="standard">
+                <div class="room-slide active">
+                  <img src="images/standard room.jpg" alt="Standard Room" />
+                </div>
+                <div class="room-slide">
+                  <img src="images/room1.jpeg" alt="Standard Room View 2" />
+                </div>
+                <div class="room-slide">
+                  <img src="images/room2.jpeg" alt="Standard Room View 3" />
+                </div>
+                <div class="room-slide">
+                  <img src="images/room3.jpeg" alt="Standard Room View 4" />
+                </div>
+              </div>
+              <button class="carousel-arrow carousel-prev" aria-label="Previous image">&#8249;</button>
+              <button class="carousel-arrow carousel-next" aria-label="Next image">&#8250;</button>
+              <div class="room-badge">Standard</div>
+              <div class="room-dots"></div>
+            </div>
+            <div class="room-body">
+              <h3 class="room-name">Standard Room</h3>
+              <p class="room-desc">A perfect combination of comfort, simplicity, and convenience for both business and leisure travelers. Designed to provide a relaxing stay with all essentials covered.</p>
+              <ul class="room-features">
+                <li><span class="feat-icon">&#128716;</span> Queen size bed</li>
+                <li><span class="feat-icon">&#10052;</span> Air conditioning</li>
+                <li><span class="feat-icon">&#128246;</span> Free Wi-Fi</li>
+                <li><span class="feat-icon">&#128250;</span> Flat-screen smart TV</li>
+                <li><span class="feat-icon">&#128196;</span> Working desk</li>
+                <li><span class="feat-icon">&#128704;</span> Private bathroom</li>
+              </ul>
+              <div class="room-footer">
+                <a href="https://kitoboserenity-production.up.railway.app/booking" target="_blank" class="btn btn-primary btn-full">Book Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- DELUXE ROOM -->
+        <div class="room-card reveal" data-delay="150">
+          <div class="room-card-inner featured">
+            <div class="featured-label">Most Popular</div>
+            <div class="room-image-wrap">
+              <div class="room-carousel" data-room="deluxe">
+                <div class="room-slide active">
+                  <img src="images/deluxe room.jpeg" alt="Deluxe Room" />
+                </div>
+                <div class="room-slide">
+                  <img src="images/room 4.jpeg" alt="Deluxe Room View 2" />
+                </div>
+                <div class="room-slide">
+                  <img src="images/room 5.jpg" alt="Deluxe Room View 3" />
+                </div>
+                <div class="room-slide">
+                  <img src="images/room 6.jpeg" alt="Deluxe Room View 4" />
+                </div>
+              </div>
+              <button class="carousel-arrow carousel-prev" aria-label="Previous image">&#8249;</button>
+              <button class="carousel-arrow carousel-next" aria-label="Next image">&#8250;</button>
+              <div class="room-badge deluxe">Deluxe</div>
+              <div class="room-dots"></div>
+            </div>
+            <div class="room-body">
+              <h3 class="room-name">Deluxe Room</h3>
+              <p class="room-desc">Experience extra comfort and elegance, thoughtfully designed to provide a relaxing and luxurious stay with stunning views of Mount Meru.</p>
+              <ul class="room-features">
+                <li><span class="feat-icon">&#128716;</span> King size bed</li>
+                <li><span class="feat-icon">&#9749;</span> Coffee station</li>
+                <li><span class="feat-icon">&#10052;</span> Air conditioning</li>
+                <li><span class="feat-icon">&#127956;</span> View of Mount Meru</li>
+                <li><span class="feat-icon">&#128246;</span> Free Wi-Fi</li>
+                <li><span class="feat-icon">&#128250;</span> Flat-screen smart TV</li>
+              </ul>
+              <div class="room-footer">
+                <a href="https://kitoboserenity-production.up.railway.app/booking" target="_blank" class="btn btn-primary btn-full">Book Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- EXECUTIVE ROOM -->
+        <div class="room-card reveal" data-delay="300">
+          <div class="room-card-inner">
+            <div class="room-image-wrap">
+              <div class="room-carousel" data-room="executive">
+                <div class="room-slide active">
+                  <img src="images/executive room.jpg" alt="Executive Room" />
+                </div>
+                <div class="room-slide">
+                  <img src="images/room 7.jpeg" alt="Executive Room View 2" />
+                </div>
+                <div class="room-slide">
+                  <img src="images/bathroom.jpeg" alt="Executive Room Bathroom" />
+                </div>
+                <div class="room-slide">
+                  <img src="images/interior 6.jpeg" alt="Executive Room Lounge" />
+                </div>
+              </div>
+              <button class="carousel-arrow carousel-prev" aria-label="Previous image">&#8249;</button>
+              <button class="carousel-arrow carousel-next" aria-label="Next image">&#8250;</button>
+              <div class="room-badge executive">Executive</div>
+              <div class="room-dots"></div>
+            </div>
+            <div class="room-body">
+              <h3 class="room-name">Executive Room</h3>
+              <p class="room-desc">A premium level of comfort, elegance, and convenience for guests who desire a truly luxurious stay with a dedicated lounge area and perfect Mount Meru views.</p>
+              <ul class="room-features">
+                <li><span class="feat-icon">&#128716;</span> King size bed</li>
+                <li><span class="feat-icon">&#127956;</span> Perfect view of Mount Meru</li>
+                <li><span class="feat-icon">&#127977;</span> Lounge Area</li>
+                <li><span class="feat-icon">&#9749;</span> Coffee station</li>
+                <li><span class="feat-icon">&#128246;</span> Free Wi-Fi</li>
+                <li><span class="feat-icon">&#128250;</span> Flat-screen smart TV</li>
+              </ul>
+              <div class="room-footer">
+                <a href="https://kitoboserenity-production.up.railway.app/booking" target="_blank" class="btn btn-primary btn-full">Book Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- BAR & RESTAURANT -->
+  <section id="bar-restaurant" class="bar-restaurant">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Dining &amp; Drinks</span>
+        <h2 class="section-title">Bar &amp; Restaurant</h2>
+        <p class="section-subtitle">Savour exceptional cuisine and handcrafted cocktails in an atmosphere that blends elegance with warm Tanzanian hospitality.</p>
+      </div>
+    </div>
+
+    <div class="dining-showcase">
+
+      <!-- RESTAURANT PANEL -->
+      <div class="dining-showcase-item reveal">
+        <div class="dining-showcase-img">
+          <img src="images/restaurant.jpg" alt="Kitobo Restaurant" />
+          <div class="dining-img-overlay"></div>
+        </div>
+        <div class="dining-showcase-body">
+          <div class="dining-panel-num">01</div>
+          <span class="dining-panel-tag">Restaurant</span>
+          <h3 class="dining-panel-title">Fine Dining<br />at Its Best</h3>
+          <p class="dining-panel-desc">Our restaurant brings together the finest local and international ingredients, celebrating Tanzanian flavours with a refined modern twist. From leisurely breakfasts with Mount Meru views to candlelit dinners &mdash; every meal is crafted to be unforgettable.</p>
+          <ul class="dining-panel-features">
+            <li><span>&#127374;</span> Breakfast, Lunch &amp; Dinner daily</li>
+            <li><span>&#127757;</span> Local &amp; International cuisine</li>
+            <li><span>&#127956;</span> Scenic Mount Meru views</li>
+            <li><span>&#127869;</span> Private dining available</li>
+            <li><span>&#127807;</span> Vegetarian &amp; dietary options</li>
+          </ul>
+          <a href="https://kitoboserenity-production.up.railway.app/booking" target="_blank" class="btn btn-gold">Reserve a Table</a>
+        </div>
+      </div>
+
+      <!-- BAR PANEL -->
+      <div class="dining-showcase-item alt reveal" data-delay="120">
+        <div class="dining-showcase-img">
+          <img src="images/bar.jpg" alt="Kitobo Bar" />
+          <div class="dining-img-overlay"></div>
+        </div>
+        <div class="dining-showcase-body">
+          <div class="dining-panel-num">02</div>
+          <span class="dining-panel-tag">Bar</span>
+          <h3 class="dining-panel-title">Unwind at<br />the Kitobo Bar</h3>
+          <p class="dining-panel-desc">Step into our stylish bar where skilled bartenders craft the perfect drink for every occasion. From signature cocktails inspired by local botanicals to premium wines and spirits &mdash; the Kitobo Bar is where unforgettable evenings begin.</p>
+          <ul class="dining-panel-features">
+            <li><span>&#127864;</span> Signature cocktails &amp; mocktails</li>
+            <li><span>&#127863;</span> Premium wines &amp; spirits</li>
+            <li><span>&#127866;</span> Local Tanzanian craft beverages</li>
+            <li><span>&#127929;</span> Live music nights</li>
+            <li><span>&#127795;</span> Outdoor lounge seating</li>
+          </ul>
+          <a href="#contact" class="btn btn-gold">Get in Touch</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+    <!-- GALLERY STRIP -->
+  <section class="gallery-strip">
+    <div class="gallery-track" id="galleryTrack">
+      <div class="gallery-item"><img src="images/interior.jpeg" alt="Interior" /></div>
+      <div class="gallery-item"><img src="images/interior 6.jpeg" alt="Interior 6" /></div>
+      <div class="gallery-item"><img src="images/interior 7.jpeg" alt="Interior 7" /></div>
+      <div class="gallery-item"><img src="images/reception.jpeg" alt="Reception" /></div>
+      <div class="gallery-item"><img src="images/reception 3.jpeg" alt="Reception 3" /></div>
+      <div class="gallery-item"><img src="images/exterior.jpeg" alt="Exterior" /></div>
+      <div class="gallery-item"><img src="images/exterior 2.jpg" alt="Exterior 2" /></div>
+      <!-- duplicates for infinite loop -->
+      <div class="gallery-item"><img src="images/interior.jpeg" alt="Interior" /></div>
+      <div class="gallery-item"><img src="images/interior 6.jpeg" alt="Interior 6" /></div>
+      <div class="gallery-item"><img src="images/reception.jpeg" alt="Reception" /></div>
+      <div class="gallery-item"><img src="images/exterior 3.jpg" alt="Exterior 3" /></div>
+      <div class="gallery-item"><img src="images/exterior 4.jpg" alt="Exterior 4" /></div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Get In Touch</span>
+        <h2 class="section-title">Contact Us</h2>
+        <p class="section-subtitle">We'd love to hear from you. Reach out to our team and we'll be happy to assist you.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-cards">
+          <div class="contact-card reveal" data-delay="0">
+            <div class="contact-icon">&#128222;</div>
+            <h4>Telephone</h4>
+            <a href="tel:+255655500118">+255 655 500 118</a>
+          </div>
+          <div class="contact-card reveal" data-delay="120">
+            <div class="contact-icon">&#128241;</div>
+            <h4>WhatsApp</h4>
+            <a href="https://wa.me/255790500168" target="_blank">+255 790 500 168</a>
+          </div>
+          <div class="contact-card reveal" data-delay="240">
+            <div class="contact-icon">&#9993;</div>
+            <h4>Email</h4>
+            <a href="mailto:info@kitoboserenityresort.com">info@kitoboserenityresort.com</a>
+          </div>
+          <div class="contact-card reveal" data-delay="360">
+            <div class="contact-icon">&#127968;</div>
+            <h4>Location</h4>
+            <p>Arusha, Tanzania<br />At the foot of Mount Meru</p>
+          </div>
+        </div>
+        <div class="contact-form-wrap reveal-right" data-delay="100">
+          <form class="contact-form" id="contactForm">
+            <h3>Send Us a Message</h3>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="fname" placeholder="Your first name" required />
+              </div>
+              <div class="form-group">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lname" placeholder="Your last name" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" required />
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="How can we help?" />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell us more..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+            <div class="form-success" id="formSuccess">Thank you! We'll be in touch soon.</div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BOOKING STRIP -->
+  <section class="cta-strip">
+    <div class="cta-bg" style="background-image: url('images/exterior 3.jpg')"></div>
+    <div class="cta-overlay"></div>
+    <div class="cta-content reveal">
+      <h2>Ready for a Perfect Getaway?</h2>
+      <p>Book your stay at Kitobo Serenity Resort and experience the magic of Mount Meru.</p>
+      <a href="https://kitoboserenity-production.up.railway.app/booking" target="_blank" class="btn btn-gold btn-lg">Book Your Room Now</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="images/logo.png" alt="Kitobo Serenity Resort" class="footer-logo" />
+          <p>A luxury boutique resort in Arusha, Tanzania — where serenity meets the extraordinary.</p>
+          <div class="social-links">
+            <a href="https://wa.me/255790500168" target="_blank" class="social-link" aria-label="WhatsApp">&#128241;</a>
+            <a href="mailto:info@kitoboserenityresort.com" class="social-link" aria-label="Email">&#9993;</a>
+            <a href="tel:+255655500118" class="social-link" aria-label="Phone">&#128222;</a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#accommodations">Accommodations</a></li>
+            <li><a href="#bar-restaurant">Bar &amp; Restaurant</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-rooms">
+          <h4>Our Rooms</h4>
+          <ul>
+            <li><a href="#accommodations">Standard Room</a></li>
+            <li><a href="#accommodations">Deluxe Room</a></li>
+            <li><a href="#accommodations">Executive Room</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact Info</h4>
+          <ul>
+            <li>&#128222; <a href="tel:+255655500118">+255 655 500 118</a></li>
+            <li>&#128241; <a href="https://wa.me/255790500168" target="_blank">+255 790 500 168</a></li>
+            <li>&#9993; <a href="mailto:info@kitoboserenityresort.com">info@kitoboserenityresort.com</a></li>
+            <li>&#127968; Arusha, Tanzania</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Kitobo Serenity Resort. All rights reserved.</p>
+        <a href="https://kitoboserenity-production.up.railway.app/booking" target="_blank" class="footer-book-btn">Book Now</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">&#8679;</button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

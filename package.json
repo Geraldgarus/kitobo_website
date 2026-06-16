@@ -1,0 +1,11 @@
+{
+  "name": "kitobo-serenity-resort",
+  "version": "1.0.0",
+  "description": "Kitobo Serenity Resort website",
+  "scripts": {
+    "start": "serve . -p ${PORT:-3000} -s"
+  },
+  "dependencies": {
+    "serve": "^14.2.3"
+  }
+}
