@@ -1579,6 +1579,7 @@ p  { color: var(--text-muted); line-height: 1.8; }
   }
   .nav-book-btn:hover { background: var(--gold-dark); transform: none; }
 
+  .hero { height: 58vh; min-height: 380px; }
   .hero-content { padding: 0 16px; }
   .hero-scroll { display: none; }
   .page-hero { height: 44vh; min-height: 280px; padding-bottom: 40px; }
