@@ -1201,7 +1201,7 @@ p  { color: var(--text-muted); line-height: 1.8; }
 
 .preloader-logo {
   height: 80px;
-  filter: brightness(0) invert(1);
+  filter: none;
   animation: preloaderPulse 2s ease-in-out infinite;
   margin-bottom: 20px;
 }
