@@ -922,6 +922,25 @@ p  { color: var(--text-muted); line-height: 1.8; }
 .value-card h4 { margin-bottom: 10px; }
 .value-card p  { font-size: 0.88rem; }
 
+/* ── Event Cards (Conference & Events page) ── */
+.event-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 36px 28px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  border-top: 4px solid var(--green);
+  transition: transform var(--speed) var(--ease), box-shadow var(--speed) var(--ease);
+}
+.event-card:hover { transform: translateY(-8px); box-shadow: var(--shadow); }
+.event-card-icon {
+  font-size: 2.4rem;
+  margin-bottom: 18px;
+  display: block;
+}
+.event-card h4 { margin-bottom: 10px; color: var(--green-dark); }
+.event-card p  { font-size: 0.88rem; line-height: 1.65; }
+
 .stats-banner {
   background: var(--green);
   border-radius: var(--radius);

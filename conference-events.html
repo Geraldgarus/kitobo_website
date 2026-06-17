@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conference &amp; Events | Kitobo Serenity Resort</title>
+  <meta name="description" content="Host your next conference, corporate meeting, or special event at Kitobo Serenity Resort in Arusha, Tanzania." />
+  <link rel="icon" type="image/png" href="images/logo.png" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div id="preloader">
+    <img src="images/logo.png" alt="Kitobo" class="preloader-logo" />
+    <div class="preloader-name">Kitobo Serenity Resort</div>
+    <div class="preloader-dots"><span></span><span></span><span></span></div>
+  </div>
+
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <nav id="navbar" class="solid">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo.png" alt="Kitobo Serenity Resort" />
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html"              class="nav-link">Home</a></li>
+        <li><a href="about.html"              class="nav-link">About</a></li>
+        <li><a href="accommodations.html"     class="nav-link">Rooms</a></li>
+        <li><a href="bar-restaurant.html"     class="nav-link">Dining</a></li>
+        <li><a href="conference-events.html"  class="nav-link active">Conference</a></li>
+        <li><a href="contact.html"            class="nav-link">Contact</a></li>
+        <li><a href="https://kitoboserenity-production.up.railway.app/booking" target="_blank" class="nav-book-btn">Book Now</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero" style="background-image:url('images/conference and events.jpeg'); padding-top:76px;">
+    <div class="container">
+      <div class="page-hero-content">
+        <span class="tag">Meetings &amp; Celebrations</span>
+        <h1>Conference &amp; Events</h1>
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb-sep">/</span>
+          <span>Conference &amp; Events</span>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <!-- INTRO -->
+  <section class="section" style="background:var(--white);">
+    <div class="container">
+      <div class="grid-2">
+        <div class="reveal-left">
+          <span class="tag">Your Venue in Arusha</span>
+          <h2 class="section-title">Where Business Meets Serenity</h2>
+          <div class="heading-line"></div>
+          <p style="margin-bottom:20px;">Kitobo Serenity Resort offers a unique and inspiring setting for conferences, corporate meetings, workshops, and special events. Nestled at the foot of Mount Meru, our venue combines professional facilities with the calming beauty of nature.</p>
+          <p style="margin-bottom:20px;">Whether you are planning an intimate boardroom meeting or a large-scale corporate event, our dedicated team will ensure every detail is handled with precision and warmth.</p>
+          <p style="margin-bottom:36px;">Let the peaceful surroundings of Arusha inspire creativity, focus, and connection among your team or guests.</p>
+          <div style="display:flex;gap:16px;flex-wrap:wrap;">
+            <a href="contact.html" class="btn btn-primary">Enquire Now</a>
+            <a href="#event-types" class="btn btn-outline-green">View Event Types</a>
+          </div>
+        </div>
+        <div class="reveal-right" style="position:relative;">
+          <div style="border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-lg);">
+            <img src="images/conference and events.jpeg" alt="Conference at Kitobo" style="width:100%;height:460px;object-fit:cover;" />
+          </div>
+          <div style="position:absolute;bottom:-20px;left:-20px;background:var(--green);color:var(--white);border-radius:var(--radius-sm);padding:20px 24px;box-shadow:var(--shadow-lg);">
+            <div style="font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:700;color:var(--gold-light);line-height:1;">100%</div>
+            <div style="font-size:0.82rem;opacity:0.85;margin-top:4px;">Dedicated Event Support</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section style="background:var(--green);padding:60px 0;">
+    <div class="container">
+      <div class="stats-banner reveal" style="background:transparent;box-shadow:none;padding:0;">
+        <div class="stat">
+          <strong style="color:var(--gold-light);">🏛️</strong>
+          <small style="color:rgba(255,255,255,0.8);">Dedicated Venue</small>
+        </div>
+        <div class="stat">
+          <strong data-count="50" data-suffix="+" style="color:var(--gold-light);">50+</strong>
+          <small style="color:rgba(255,255,255,0.8);">Guest Capacity</small>
+        </div>
+        <div class="stat">
+          <strong style="color:var(--gold-light);">📡</strong>
+          <small style="color:rgba(255,255,255,0.8);">High-Speed WiFi</small>
+        </div>
+        <div class="stat">
+          <strong style="color:var(--gold-light);">🎯</strong>
+          <small style="color:rgba(255,255,255,0.8);">Full AV Equipment</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENT TYPES -->
+  <section id="event-types" class="section" style="background:var(--off-white);">
+    <div class="container">
+      <div class="text-center reveal" style="margin-bottom:56px;">
+        <span class="tag">What We Host</span>
+        <h2 class="section-title">Events We Specialise In</h2>
+        <div class="heading-line center"></div>
+        <p class="section-sub">From corporate gatherings to personal celebrations, Kitobo Serenity Resort is the perfect backdrop for every occasion.</p>
+      </div>
+      <div class="grid-3 reveal">
+        <div class="event-card">
+          <div class="event-card-icon">💼</div>
+          <h4>Corporate Conferences</h4>
+          <p>Professional conference setup with AV equipment, projectors, whiteboards, and high-speed WiFi. Perfect for company-wide meetings and strategy sessions.</p>
+        </div>
+        <div class="event-card">
+          <div class="event-card-icon">🤝</div>
+          <h4>Business Meetings</h4>
+          <p>Intimate boardroom-style meetings in a distraction-free environment. We provide stationery, refreshments, and dedicated support throughout.</p>
+        </div>
+        <div class="event-card">
+          <div class="event-card-icon">📚</div>
+          <h4>Workshops &amp; Training</h4>
+          <p>Interactive training sessions and workshops with flexible room layouts, breakout spaces, and full catering available all day.</p>
+        </div>
+        <div class="event-card">
+          <div class="event-card-icon">🎉</div>
+          <h4>Private Celebrations</h4>
+          <p>Birthday parties, anniversaries, and family gatherings in a beautiful and serene setting with bespoke décor and custom catering.</p>
+        </div>
+        <div class="event-card">
+          <div class="event-card-icon">🍽️</div>
+          <h4>Gala Dinners</h4>
+          <p>Elegant dinner events with our full restaurant service, custom menus, ambient lighting, and Mount Meru views as your backdrop.</p>
+        </div>
+        <div class="event-card">
+          <div class="event-card-icon">🎓</div>
+          <h4>Seminars &amp; Retreats</h4>
+          <p>Team retreats, NGO seminars, and educational workshops in a calm environment that encourages focus, creativity, and collaboration.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FACILITIES -->
+  <section class="section" style="background:var(--white);">
+    <div class="container">
+      <div class="grid-2" style="gap:72px;">
+        <div class="reveal-left" style="position:relative;">
+          <div style="border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-lg);">
+            <img src="images/conference and events.jpeg" alt="Event Setup" style="width:100%;height:420px;object-fit:cover;" />
+          </div>
+        </div>
+        <div class="reveal-right">
+          <span class="tag">What's Included</span>
+          <h2 class="section-title">Full Event Facilities</h2>
+          <div class="heading-line"></div>
+          <p style="margin-bottom:28px;">Our event spaces come fully equipped with everything you need for a seamless and successful event — so you can focus on what matters most.</p>
+          <div style="display:flex;flex-direction:column;gap:16px;">
+            <div style="display:flex;align-items:center;gap:16px;">
+              <div style="width:40px;height:40px;background:var(--green-pale);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;">📽️</div>
+              <span style="font-size:0.92rem;color:var(--text);">Projector &amp; large screen with HDMI connectivity</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:16px;">
+              <div style="width:40px;height:40px;background:var(--green-pale);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;">🎤</div>
+              <span style="font-size:0.92rem;color:var(--text);">Public address system and microphones</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:16px;">
+              <div style="width:40px;height:40px;background:var(--green-pale);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;">📶</div>
+              <span style="font-size:0.92rem;color:var(--text);">Dedicated high-speed WiFi for all attendees</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:16px;">
+              <div style="width:40px;height:40px;background:var(--green-pale);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;">☕</div>
+              <span style="font-size:0.92rem;color:var(--text);">Tea, coffee &amp; refreshment breaks included</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:16px;">
+              <div style="width:40px;height:40px;background:var(--green-pale);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;">🍽️</div>
+              <span style="font-size:0.92rem;color:var(--text);">Full catering — breakfast, lunch &amp; dinner available</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:16px;">
+              <div style="width:40px;height:40px;background:var(--green-pale);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;">🛏️</div>
+              <span style="font-size:0.92rem;color:var(--text);">Accommodation packages for overnight delegates</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:16px;">
+              <div style="width:40px;height:40px;background:var(--green-pale);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;">🚗</div>
+              <span style="font-size:0.92rem;color:var(--text);">Ample secure parking for all guests</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:16px;">
+              <div style="width:40px;height:40px;background:var(--green-pale);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;">🎯</div>
+              <span style="font-size:0.92rem;color:var(--text);">Dedicated event coordinator from planning to execution</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY KITOBO -->
+  <section style="background:var(--green-pale);padding:80px 0;">
+    <div class="container">
+      <div class="text-center reveal" style="margin-bottom:52px;">
+        <span class="tag">Why Choose Us</span>
+        <h2 class="section-title">Why Host at Kitobo?</h2>
+        <div class="heading-line center"></div>
+      </div>
+      <div class="values-grid reveal">
+        <div class="value-card">
+          <div class="value-icon">🏔️</div>
+          <h4>Inspiring Setting</h4>
+          <p>Surrounded by natural beauty and the iconic Mount Meru — an environment that sparks creativity and focus.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">🍽️</div>
+          <h4>Exceptional Catering</h4>
+          <p>Our restaurant team delivers outstanding meals and refreshments tailored to your event schedule and dietary needs.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">🛎️</div>
+          <h4>Dedicated Support</h4>
+          <p>Our experienced events team works with you from enquiry to close — ensuring a smooth, stress-free experience.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">🏨</div>
+          <h4>Stay &amp; Meet</h4>
+          <p>Delegates can stay on-site in our comfortable rooms — no commuting, more focus, and a better overall experience.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta-strip" style="background-image:url('images/conference and events.jpeg')">
+    <div class="cta-strip-content reveal">
+      <span class="tag tag-gold">Get in Touch</span>
+      <h2>Plan Your Event With Us</h2>
+      <p>Tell us about your event and our team will get back to you with a tailored proposal. We'd love to host you at Kitobo Serenity Resort.</p>
+      <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+        <a href="contact.html" class="btn btn-gold btn-lg">Send an Enquiry</a>
+        <a href="https://wa.me/255790500168" target="_blank" class="btn btn-outline btn-lg">WhatsApp Us</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="images/logo.png" alt="Kitobo Serenity Resort" class="footer-logo" />
+          <p>A luxury boutique resort in Arusha, Tanzania — where serenity meets the extraordinary at the foot of Mount Meru.</p>
+          <div class="social-links">
+            <a href="https://wa.me/255790500168" target="_blank" class="social-link" aria-label="WhatsApp">📱</a>
+            <a href="mailto:info@kitoboserenityresort.com" class="social-link" aria-label="Email">✉️</a>
+            <a href="tel:+255655500118" class="social-link" aria-label="Phone">📞</a>
+          </div>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="accommodations.html">Accommodations</a></li>
+            <li><a href="bar-restaurant.html">Bar &amp; Restaurant</a></li>
+            <li><a href="conference-events.html">Conference &amp; Events</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Events We Host</h4>
+          <ul class="footer-links">
+            <li><a href="conference-events.html">Corporate Conferences</a></li>
+            <li><a href="conference-events.html">Business Meetings</a></li>
+            <li><a href="conference-events.html">Workshops &amp; Training</a></li>
+            <li><a href="conference-events.html">Gala Dinners</a></li>
+            <li><a href="conference-events.html">Private Celebrations</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact Info</h4>
+          <div class="footer-contact-list">
+            <div class="footer-contact-item">📞 <a href="tel:+255655500118">+255 655 500 118</a></div>
+            <div class="footer-contact-item">📱 <a href="https://wa.me/255790500168" target="_blank">+255 790 500 168</a></div>
+            <div class="footer-contact-item">✉️ <a href="mailto:info@kitoboserenityresort.com">info@kitoboserenityresort.com</a></div>
+            <div class="footer-contact-item">📍 Arusha, Tanzania</div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Kitobo Serenity Resort. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="contact.html">Privacy Policy</a>
+          <a href="contact.html">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+  <script src="js/main.js"></script>
+</body>
+</html>
