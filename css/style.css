@@ -1652,8 +1652,10 @@ p  { color: var(--text-muted); line-height: 1.8; }
 @media (max-width: 480px) {
   .hero-cta { flex-direction: column; align-items: center; }
   .values-grid { grid-template-columns: 1fr; }
-  .features-inner { grid-template-columns: 1fr; }
+  .features-inner { grid-template-columns: 1fr 1fr; }
   .feature-item { border-right: none !important; }
+  .feature-item:nth-child(odd) { border-right: 1px solid rgba(255,255,255,0.12) !important; }
+  .feature-item:nth-last-child(-n+2) { border-bottom: none; }
   .stats-banner { grid-template-columns: 1fr 1fr; }
   .about-images { padding-right: 24px; padding-bottom: 72px; }
   .gallery-grid { grid-template-columns: 1fr; }
