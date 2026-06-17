@@ -244,33 +244,70 @@ function initRevealObserver() {
   });
 })();
 
-/* ─── CONTACT FORM ──────────────────────────── */
+/* ─── CONTACT FORM (Formspree → info@kitoboserenityresort.com) ── */
 (function initContactForm() {
   const form       = document.getElementById('contactForm');
   const successMsg = document.getElementById('formSuccess');
   const submitBtn  = document.getElementById('submitBtn');
   if (!form) return;
 
-  form.addEventListener('submit', e => {
+  const FORMSPREE_ENDPOINT = 'https://formspree.io/f/info@kitoboserenityresort.com';
+
+  form.addEventListener('submit', async function (e) {
     e.preventDefault();
     if (!form.checkValidity()) {
       form.reportValidity();
       return;
     }
 
+    const btnText = submitBtn.querySelector('.btn-text');
     submitBtn.disabled = true;
-    submitBtn.querySelector('.btn-text').textContent = 'Sending…';
+    btnText.textContent = 'Sending…';
 
-    /* Simulate send — replace with actual API call if needed */
-    setTimeout(() => {
-      form.reset();
-      submitBtn.disabled = false;
-      submitBtn.querySelector('.btn-text').textContent = 'Send Message';
-      if (successMsg) {
-        successMsg.style.display = 'block';
-        setTimeout(() => { successMsg.style.display = 'none'; }, 5000);
+    /* Build payload */
+    const data = {
+      name:    (form.fname.value + ' ' + form.lname.value).trim(),
+      email:   form.email.value,
+      phone:   form.phone ? form.phone.value : '',
+      subject: form.subject.value,
+      dates:   form.dates ? form.dates.value : '',
+      message: form.message.value,
+      _replyto: form.email.value
+    };
+
+    try {
+      const res = await fetch(FORMSPREE_ENDPOINT, {
+        method:  'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body:    JSON.stringify(data)
+      });
+
+      if (res.ok) {
+        form.reset();
+        if (successMsg) {
+          successMsg.style.display = 'block';
+          successMsg.textContent   = 'Your message has been sent! We\'ll be in touch within 24 hours.';
+          setTimeout(() => { successMsg.style.display = 'none'; }, 6000);
+        }
+      } else {
+        if (successMsg) {
+          successMsg.style.display      = 'block';
+          successMsg.style.background   = '#fde8e8';
+          successMsg.style.color        = '#c0392b';
+          successMsg.textContent        = 'Sorry, something went wrong. Please email us directly at info@kitoboserenityresort.com';
+        }
       }
-    }, 1200);
+    } catch {
+      if (successMsg) {
+        successMsg.style.display    = 'block';
+        successMsg.style.background = '#fde8e8';
+        successMsg.style.color      = '#c0392b';
+        successMsg.textContent      = 'Network error. Please email us at info@kitoboserenityresort.com';
+      }
+    } finally {
+      submitBtn.disabled  = false;
+      btnText.textContent = 'Send Message';
+    }
   });
 
   /* Real-time validation */
