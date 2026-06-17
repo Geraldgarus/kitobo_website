@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Kitobo Serenity Resort</title>
+  <meta name="description" content="Get in touch with Kitobo Serenity Resort in Arusha, Tanzania. Book a room, make a dining reservation, or ask us anything." />
+  <link rel="icon" type="image/png" href="images/logo.png" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div id="preloader">
+    <img src="images/logo.png" alt="Kitobo" class="preloader-logo" />
+    <div class="preloader-bar"><div class="preloader-fill"></div></div>
+  </div>
+
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <nav id="navbar" class="solid">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo.png" alt="Kitobo Serenity Resort" />
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html"          class="nav-link">Home</a></li>
+        <li><a href="about.html"          class="nav-link">About</a></li>
+        <li><a href="accommodations.html" class="nav-link">Rooms</a></li>
+        <li><a href="bar-restaurant.html" class="nav-link">Dining</a></li>
+        <li><a href="contact.html"        class="nav-link active">Contact</a></li>
+        <li><a href="https://kitoboserenity-production.up.railway.app/booking" target="_blank" class="nav-book-btn">Book Now</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero" style="background-image:url('images/exterior 2.jpg'); padding-top:76px;">
+    <div class="container">
+      <div class="page-hero-content">
+        <span class="tag">Get In Touch</span>
+        <h1>Contact Us</h1>
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb-sep">/</span>
+          <span>Contact</span>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT SECTION -->
+  <section class="section" style="background:var(--off-white);">
+    <div class="container">
+      <div class="text-center reveal" style="margin-bottom:56px;">
+        <span class="tag">We'd Love to Hear From You</span>
+        <h2 class="section-title">Reach Out to Our Team</h2>
+        <div class="heading-line center"></div>
+        <p class="section-sub">Whether you're planning a stay, have a question about our dining, or need help with an itinerary — our friendly team is here to assist you.</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- CONTACT CARDS -->
+        <div class="contact-cards">
+          <div class="contact-card reveal" data-delay="0">
+            <div class="contact-card-icon">📞</div>
+            <div>
+              <h4>Call Us</h4>
+              <p>Reach our front desk directly for reservations or enquiries.</p>
+              <a href="tel:+255655500118" class="contact-card-link">+255 655 500 118</a>
+            </div>
+          </div>
+          <div class="contact-card reveal" data-delay="100">
+            <div class="contact-card-icon">📱</div>
+            <div>
+              <h4>WhatsApp</h4>
+              <p>Chat with us on WhatsApp — quick responses throughout the day.</p>
+              <a href="https://wa.me/255790500168" target="_blank" class="contact-card-link">+255 790 500 168</a>
+            </div>
+          </div>
+          <div class="contact-card reveal" data-delay="200">
+            <div class="contact-card-icon">✉️</div>
+            <div>
+              <h4>Email Us</h4>
+              <p>Send us an email and we'll get back to you within 24 hours.</p>
+              <a href="mailto:info@kitoboserenityresort.com" class="contact-card-link">info@kitoboserenityresort.com</a>
+            </div>
+          </div>
+          <div class="contact-card reveal" data-delay="300">
+            <div class="contact-card-icon">📍</div>
+            <div>
+              <h4>Find Us</h4>
+              <p>We are located in Arusha, Tanzania — gateway to East Africa's best safaris.</p>
+              <span class="contact-card-link">Arusha, Tanzania</span>
+            </div>
+          </div>
+          <div class="contact-card reveal" data-delay="400">
+            <div class="contact-card-icon">🕐</div>
+            <div>
+              <h4>Reception Hours</h4>
+              <p>Our team is at your service around the clock, every day.</p>
+              <span class="contact-card-link">24 Hours / 7 Days a Week</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CONTACT FORM -->
+        <div class="form-card reveal-right">
+          <span class="tag">Send a Message</span>
+          <h3 style="font-family:'Playfair Display',serif;font-size:1.8rem;margin:12px 0 8px;">How Can We Help?</h3>
+          <div class="heading-line" style="margin-bottom:28px;"></div>
+
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fname">First Name *</label>
+                <input type="text" id="fname" name="fname" placeholder="Your first name" required />
+              </div>
+              <div class="form-group">
+                <label for="lname">Last Name *</label>
+                <input type="text" id="lname" name="lname" placeholder="Your last name" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="+255 ..." />
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject *</label>
+              <select id="subject" name="subject" required>
+                <option value="" disabled selected>Select a subject</option>
+                <option value="booking">Room Booking Enquiry</option>
+                <option value="dining">Dining Reservation</option>
+                <option value="safari">Safari / Tour Arrangement</option>
+                <option value="event">Event / Conference</option>
+                <option value="general">General Enquiry</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="dates">Preferred Dates</label>
+              <input type="text" id="dates" name="dates" placeholder="e.g. 20 July – 25 July 2026" />
+            </div>
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell us how we can help you..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block" id="submitBtn">
+              <span class="btn-text">Send Message</span>
+            </button>
+            <div class="form-success" id="formSuccess">
+              Your message has been sent! We'll be in touch within 24 hours.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAP / LOCATION -->
+  <section style="background:var(--white);padding:80px 0;">
+    <div class="container">
+      <div class="text-center reveal" style="margin-bottom:48px;">
+        <span class="tag">Our Location</span>
+        <h2 class="section-title">Find Us in Arusha</h2>
+        <div class="heading-line center"></div>
+        <p class="section-sub">Kitobo Serenity Resort is conveniently located in Arusha — just minutes from Arusha Airport and close to world-class safari destinations.</p>
+      </div>
+      <div class="reveal" style="border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-lg);height:420px;background:var(--green-pale);display:flex;align-items:center;justify-content:center;text-align:center;flex-direction:column;gap:16px;">
+        <div style="font-size:3rem;">📍</div>
+        <h3 style="font-family:'Playfair Display',serif;color:var(--green);">Kitobo Serenity Resort</h3>
+        <p style="color:var(--text-light);max-width:360px;">Arusha, Tanzania — at the foot of the majestic Mount Meru</p>
+        <a href="https://www.google.com/maps/search/Kitobo+Serenity+Resort+Arusha+Tanzania" target="_blank" class="btn btn-primary" style="margin-top:8px;">View on Google Maps →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUICK LINKS / FAQ STRIP -->
+  <section style="background:var(--green-pale);padding:60px 0;">
+    <div class="container">
+      <div class="text-center reveal" style="margin-bottom:48px;">
+        <span class="tag">Quick Answers</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="heading-line center"></div>
+      </div>
+      <div class="faq-grid reveal">
+        <div class="faq-item">
+          <h4>Do you offer airport transfers?</h4>
+          <p>Yes! We arrange airport transfers upon request. Please contact us at least 24 hours before arrival so we can prepare a comfortable pickup for you.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Is breakfast included in the room rate?</h4>
+          <p>Yes, a hearty breakfast featuring local and continental options is included for all guests every morning from 7:00 AM to 10:30 AM.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Do you assist with safari arrangements?</h4>
+          <p>Absolutely. Our concierge team has strong partnerships with top safari operators in the Arusha region and can arrange day trips or extended safaris.</p>
+        </div>
+        <div class="faq-item">
+          <h4>What is the check-in and check-out time?</h4>
+          <p>Check-in is from 2:00 PM and check-out is by 11:00 AM. Early check-in and late check-out may be arranged subject to availability.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Is there free parking at the resort?</h4>
+          <p>Yes, we offer complimentary secure parking for all resident guests throughout your stay.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Can I make a dining reservation without staying?</h4>
+          <p>Yes! Our restaurant and bar welcome non-resident guests. Please call us or use the contact form above to reserve your table.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta-strip" style="background-image:url('images/exterior 3.jpg')">
+    <div class="cta-strip-content reveal">
+      <span class="tag tag-gold">Book Direct</span>
+      <h2>Ready to Visit Kitobo?</h2>
+      <p>Book directly with us for the best rates and a personally curated welcome experience in beautiful Arusha, Tanzania.</p>
+      <a href="https://kitoboserenity-production.up.railway.app/booking" target="_blank" class="btn btn-gold btn-lg">Book Your Stay →</a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="images/logo.png" alt="Kitobo Serenity Resort" class="footer-logo" />
+          <p>A luxury boutique resort in Arusha, Tanzania — where serenity meets the extraordinary at the foot of Mount Meru.</p>
+          <div class="social-links">
+            <a href="https://wa.me/255790500168" target="_blank" class="social-link" aria-label="WhatsApp">📱</a>
+            <a href="mailto:info@kitoboserenityresort.com" class="social-link" aria-label="Email">✉️</a>
+            <a href="tel:+255655500118" class="social-link" aria-label="Phone">📞</a>
+          </div>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="accommodations.html">Accommodations</a></li>
+            <li><a href="bar-restaurant.html">Bar &amp; Restaurant</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Our Rooms</h4>
+          <ul class="footer-links">
+            <li><a href="accommodations.html">Standard Room</a></li>
+            <li><a href="accommodations.html">Deluxe Room</a></li>
+            <li><a href="accommodations.html">Executive Room</a></li>
+            <li><a href="https://kitoboserenity-production.up.railway.app/booking" target="_blank">Book Now</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact Info</h4>
+          <div class="footer-contact-list">
+            <div class="footer-contact-item">📞 <a href="tel:+255655500118">+255 655 500 118</a></div>
+            <div class="footer-contact-item">📱 <a href="https://wa.me/255790500168" target="_blank">+255 790 500 168</a></div>
+            <div class="footer-contact-item">✉️ <a href="mailto:info@kitoboserenityresort.com">info@kitoboserenityresort.com</a></div>
+            <div class="footer-contact-item">📍 Arusha, Tanzania</div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Kitobo Serenity Resort. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="contact.html">Privacy Policy</a>
+          <a href="contact.html">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | Kitobo Serenity Resort</title>
+  <meta name="description" content="Learn about Kitobo Serenity Resort — our story, values, and commitment to luxury hospitality in Arusha, Tanzania." />
+  <link rel="icon" type="image/png" href="images/logo.png" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div id="preloader">
+    <img src="images/logo.png" alt="Kitobo" class="preloader-logo" />
+    <div class="preloader-bar"><div class="preloader-fill"></div></div>
+  </div>
+
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <nav id="navbar" class="solid">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo.png" alt="Kitobo Serenity Resort" />
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html"          class="nav-link">Home</a></li>
+        <li><a href="about.html"          class="nav-link active">About</a></li>
+        <li><a href="accommodations.html" class="nav-link">Rooms</a></li>
+        <li><a href="bar-restaurant.html" class="nav-link">Dining</a></li>
+        <li><a href="contact.html"        class="nav-link">Contact</a></li>
+        <li><a href="https://kitoboserenity-production.up.railway.app/booking" target="_blank" class="nav-book-btn">Book Now</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero" style="background-image:url('images/exterior 2.jpg'); padding-top:76px;">
+    <div class="container">
+      <div class="page-hero-content">
+        <span class="tag">Our Story</span>
+        <h1>About Kitobo<br />Serenity Resort</h1>
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb-sep">/</span>
+          <span>About Us</span>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <!-- OUR STORY -->
+  <section class="section" style="background:var(--white);">
+    <div class="container">
+      <div class="grid-2">
+        <div class="reveal-left">
+          <span class="tag">Who We Are</span>
+          <h2 class="section-title">A Retreat Born from a Love of Tanzania</h2>
+          <div class="heading-line"></div>
+          <p style="margin-bottom:20px;">Kitobo Serenity Resort was founded with a single vision — to create a space where guests could disconnect from the rush of life and reconnect with the beauty of nature. Situated at the foot of the majestic Mount Meru in Arusha, Tanzania, we are more than a resort; we are a sanctuary.</p>
+          <p style="margin-bottom:20px;">Our founders, deeply inspired by the warmth of Tanzanian culture and the stunning natural landscape, set out to build a place that honours both. Every brick, every garden path, every carefully chosen interior element tells a story of passion, craft, and dedication.</p>
+          <p>Today, Kitobo Serenity Resort stands as a testament to that vision — a boutique luxury destination where world-class comfort meets the authentic soul of East Africa.</p>
+        </div>
+        <div class="reveal-right" style="position:relative;">
+          <div style="border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow-lg);">
+            <img src="images/exterior.jpeg" alt="Kitobo Resort Exterior" style="width:100%;height:460px;object-fit:cover;" />
+          </div>
+          <div style="position:absolute;bottom:-24px;left:-24px;background:var(--green);color:var(--white);border-radius:var(--radius-sm);padding:24px 28px;box-shadow:var(--shadow-lg);min-width:200px;">
+            <div style="font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:700;color:var(--gold-light);line-height:1;">Est.</div>
+            <div style="font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;">Arusha, TZ</div>
+            <div style="font-size:0.8rem;opacity:0.8;margin-top:4px;">Luxury Boutique Resort</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS BANNER -->
+  <section style="background:var(--green-pale);padding:80px 0;">
+    <div class="container">
+      <div class="stats-banner reveal">
+        <div class="stat">
+          <strong data-count="3" data-suffix="+">3+</strong>
+          <small>Room Types</small>
+        </div>
+        <div class="stat">
+          <strong>24/7</strong>
+          <small>Guest Service</small>
+        </div>
+        <div class="stat">
+          <strong data-count="100" data-suffix="%">100%</strong>
+          <small>Satisfaction</small>
+        </div>
+        <div class="stat">
+          <strong>🏔️</strong>
+          <small>Mount Meru Views</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUES -->
+  <section class="section" style="background:var(--white);">
+    <div class="container">
+      <div class="text-center reveal" style="margin-bottom:56px;">
+        <span class="tag">Our Values</span>
+        <h2 class="section-title">What Makes Us Different</h2>
+        <div class="heading-line center"></div>
+        <p class="section-sub">At Kitobo, we believe luxury is not just about opulence — it's about creating moments that matter.</p>
+      </div>
+      <div class="values-grid">
+        <div class="value-card reveal" data-delay="0">
+          <div class="value-icon">🌿</div>
+          <h4>Nature First</h4>
+          <p>Our resort is designed to immerse you in the natural beauty of Tanzania. Lush gardens, open-air terraces, and panoramic views at every turn.</p>
+        </div>
+        <div class="value-card reveal" data-delay="100">
+          <div class="value-icon">🤝</div>
+          <h4>Warm Hospitality</h4>
+          <p>Our team treats every guest like family. The warmth of Tanzanian culture flows through every interaction and service we provide.</p>
+        </div>
+        <div class="value-card reveal" data-delay="200">
+          <div class="value-icon">✨</div>
+          <h4>Attention to Detail</h4>
+          <p>From the thread count of our linens to the presentation of each dish, we believe the difference is in the details.</p>
+        </div>
+        <div class="value-card reveal" data-delay="300">
+          <div class="value-icon">🌍</div>
+          <h4>Local Authenticity</h4>
+          <p>We celebrate Tanzanian culture in our cuisine, décor, and experiences. Every stay is a genuine immersion in the best of East Africa.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE SECTION -->
+  <section class="section" style="background:var(--off-white);">
+    <div class="container">
+      <div class="grid-2" style="gap:80px;">
+        <div class="reveal">
+          <span class="tag">The Experience</span>
+          <h2 class="section-title">Every Stay is a Memory</h2>
+          <div class="heading-line"></div>
+          <p style="margin-bottom:20px;">From the moment you arrive, Kitobo Serenity Resort envelops you in an atmosphere of calm, elegance, and natural beauty. Wake up to birdsong and mountain views. Savour fresh coffee on your private terrace as mist lifts from Mount Meru.</p>
+          <p style="margin-bottom:32px;">Spend your days exploring Arusha's incredible wildlife reserves, relaxing in our serene environment, or connecting with colleagues in our business-friendly spaces. As evening falls, let our bar and restaurant transport you with exceptional food and handcrafted cocktails.</p>
+          <div style="display:flex;flex-direction:column;gap:16px;">
+            <div style="display:flex;align-items:center;gap:14px;">
+              <div style="width:36px;height:36px;background:var(--green-pale);border-radius:50%;display:flex;align-items:center;justify-content:center;">🛏️</div>
+              <span style="font-size:0.92rem;color:var(--text);">Luxuriously appointed rooms with premium bedding</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:14px;">
+              <div style="width:36px;height:36px;background:var(--green-pale);border-radius:50%;display:flex;align-items:center;justify-content:center;">🍳</div>
+              <span style="font-size:0.92rem;color:var(--text);">Daily breakfast featuring local and continental options</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:14px;">
+              <div style="width:36px;height:36px;background:var(--green-pale);border-radius:50%;display:flex;align-items:center;justify-content:center;">🌄</div>
+              <span style="font-size:0.92rem;color:var(--text);">Sunrise views of Arusha's iconic Mount Meru</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:14px;">
+              <div style="width:36px;height:36px;background:var(--green-pale);border-radius:50%;display:flex;align-items:center;justify-content:center;">🚗</div>
+              <span style="font-size:0.92rem;color:var(--text);">Airport transfers and safari arrangements available</span>
+            </div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;" class="reveal-right">
+          <div style="border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);">
+            <img src="images/interior 6.jpeg" alt="Interior" style="width:100%;height:220px;object-fit:cover;" />
+          </div>
+          <div style="border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);margin-top:28px;">
+            <img src="images/interior 7.jpeg" alt="Interior 7" style="width:100%;height:220px;object-fit:cover;" />
+          </div>
+          <div style="border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);">
+            <img src="images/reception 3.jpeg" alt="Reception" style="width:100%;height:220px;object-fit:cover;" />
+          </div>
+          <div style="border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);margin-top:-28px;">
+            <img src="images/exterior 4.jpg" alt="Exterior" style="width:100%;height:220px;object-fit:cover;" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta-strip" style="background-image:url('images/exterior 3.jpg')">
+    <div class="cta-strip-content reveal">
+      <span class="tag tag-gold">Book Today</span>
+      <h2>Come Experience Kitobo</h2>
+      <p>Whether you're seeking a romantic escape, a family retreat, or a business stay — Kitobo Serenity Resort is your perfect destination in Tanzania.</p>
+      <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+        <a href="https://kitoboserenity-production.up.railway.app/booking" target="_blank" class="btn btn-gold btn-lg">Book Your Stay</a>
+        <a href="contact.html" class="btn btn-outline btn-lg">Contact Us</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="images/logo.png" alt="Kitobo Serenity Resort" class="footer-logo" />
+          <p>A luxury boutique resort in Arusha, Tanzania — where serenity meets the extraordinary at the foot of Mount Meru.</p>
+          <div class="social-links">
+            <a href="https://wa.me/255790500168" target="_blank" class="social-link" aria-label="WhatsApp">📱</a>
+            <a href="mailto:info@kitoboserenityresort.com" class="social-link" aria-label="Email">✉️</a>
+            <a href="tel:+255655500118" class="social-link" aria-label="Phone">📞</a>
+          </div>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="accommodations.html">Accommodations</a></li>
+            <li><a href="bar-restaurant.html">Bar &amp; Restaurant</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Our Rooms</h4>
+          <ul class="footer-links">
+            <li><a href="accommodations.html">Standard Room</a></li>
+            <li><a href="accommodations.html">Deluxe Room</a></li>
+            <li><a href="accommodations.html">Executive Room</a></li>
+            <li><a href="https://kitoboserenity-production.up.railway.app/booking" target="_blank">Book Now</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact Info</h4>
+          <div class="footer-contact-list">
+            <div class="footer-contact-item">📞 <a href="tel:+255655500118">+255 655 500 118</a></div>
+            <div class="footer-contact-item">📱 <a href="https://wa.me/255790500168" target="_blank">+255 790 500 168</a></div>
+            <div class="footer-contact-item">✉️ <a href="mailto:info@kitoboserenityresort.com">info@kitoboserenityresort.com</a></div>
+            <div class="footer-contact-item">📍 Arusha, Tanzania</div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Kitobo Serenity Resort. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="contact.html">Privacy Policy</a>
+          <a href="contact.html">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+  <script src="js/main.js"></script>
+</body>
+</html>
