@@ -287,7 +287,7 @@ function initRevealObserver() {
   const submitBtn  = document.getElementById('submitBtn');
   if (!form) return;
 
-  const FORMSPREE_ENDPOINT = 'https://formspree.io/f/info@kitoboserenityresort.com';
+  const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mbdeeojq';
 
   form.addEventListener('submit', async function (e) {
     e.preventDefault();
