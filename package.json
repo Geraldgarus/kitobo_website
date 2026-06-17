@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Kitobo Serenity Resort website",
   "scripts": {
-    "start": "serve . -p ${PORT:-3000} -s"
+    "start": "serve . -p ${PORT:-3000}"
   },
   "dependencies": {
     "serve": "^14.2.3"
