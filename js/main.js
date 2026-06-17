@@ -41,25 +41,61 @@ function updateNavbar() {
 const hamburger = document.getElementById('hamburger');
 const navLinks  = document.getElementById('navLinks');
 
+/* Inject mobile panel header (logo + close button) */
+if (navLinks && !navLinks.querySelector('.nav-mobile-header')) {
+  const header = document.createElement('div');
+  header.className = 'nav-mobile-header';
+  header.innerHTML = '<img src="images/logo.png" alt="Kitobo" class="nav-mobile-logo" />' +
+    '<button class="nav-mobile-close" aria-label="Close menu">✕</button>';
+  navLinks.insertBefore(header, navLinks.firstChild);
+}
+
+/* Backdrop */
+let backdrop = document.getElementById('navBackdrop');
+if (!backdrop) {
+  backdrop = document.createElement('div');
+  backdrop.className = 'nav-backdrop';
+  backdrop.id = 'navBackdrop';
+  document.body.appendChild(backdrop);
+}
+
+function openNav() {
+  navLinks.classList.add('open');
+  hamburger.classList.add('active');
+  hamburger.setAttribute('aria-expanded', 'true');
+  backdrop.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeNav() {
+  navLinks.classList.remove('open');
+  hamburger.classList.remove('active');
+  hamburger.setAttribute('aria-expanded', 'false');
+  backdrop.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
 if (hamburger && navLinks) {
   hamburger.addEventListener('click', () => {
-    const open = navLinks.classList.toggle('open');
-    hamburger.classList.toggle('active', open);
-    hamburger.setAttribute('aria-expanded', open);
+    navLinks.classList.contains('open') ? closeNav() : openNav();
   });
 
+  /* Close button inside panel */
+  navLinks.addEventListener('click', e => {
+    if (e.target.classList.contains('nav-mobile-close')) closeNav();
+  });
+
+  /* Close on link click */
   navLinks.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => {
-      navLinks.classList.remove('open');
-      hamburger.classList.remove('active');
-    });
+    a.addEventListener('click', closeNav);
   });
 
-  document.addEventListener('click', e => {
-    if (!navbar.contains(e.target)) {
-      navLinks.classList.remove('open');
-      hamburger.classList.remove('active');
-    }
+  /* Close on backdrop click */
+  backdrop.addEventListener('click', closeNav);
+
+  /* Close on Escape key */
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeNav();
   });
 }
 
