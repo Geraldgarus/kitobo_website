@@ -400,8 +400,8 @@ p  { color: var(--text-muted); line-height: 1.8; }
 
 /* ── PAGE HERO (inner pages) ────────────────────────────────── */
 .page-hero {
-  height: 52vh;
-  min-height: 360px;
+  height: 68vh;
+  min-height: 440px;
   position: relative;
   display: flex;
   align-items: flex-end;
