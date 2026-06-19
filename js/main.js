@@ -280,14 +280,14 @@ function initRevealObserver() {
   });
 })();
 
-/* ─── CONTACT FORM (Formspree → info@kitoboserenityresort.com) ── */
+/* ─── CONTACT FORM (Web3Forms → info@kitoboserenityresort.com) ── */
 (function initContactForm() {
   const form       = document.getElementById('contactForm');
   const successMsg = document.getElementById('formSuccess');
   const submitBtn  = document.getElementById('submitBtn');
   if (!form) return;
 
-  const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mbdeeojq';
+  const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit';
 
   form.addEventListener('submit', async function (e) {
     e.preventDefault();
@@ -302,17 +302,17 @@ function initRevealObserver() {
 
     /* Build payload */
     const data = {
+      access_key: '5b5c3c22-2fad-4aac-bb12-89a642ce0c3c',
       name:    (form.fname.value + ' ' + form.lname.value).trim(),
       email:   form.email.value,
       phone:   form.phone ? form.phone.value : '',
-      subject: form.subject.value,
+      subject: form.subject ? form.subject.value : '',
       dates:   form.dates ? form.dates.value : '',
-      message: form.message.value,
-      _replyto: form.email.value
+      message: form.message.value
     };
 
     try {
-      const res = await fetch(FORMSPREE_ENDPOINT, {
+      const res = await fetch(WEB3FORMS_ENDPOINT, {
         method:  'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body:    JSON.stringify(data)
