@@ -303,6 +303,7 @@ function initRevealObserver() {
     /* Build payload */
     const data = {
       access_key: '5b5c3c22-2fad-4aac-bb12-89a642ce0c3c',
+      botcheck:   false,
       name:    (form.fname.value + ' ' + form.lname.value).trim(),
       email:   form.email.value,
       phone:   form.phone ? form.phone.value : '',
@@ -312,25 +313,28 @@ function initRevealObserver() {
     };
 
     try {
-      const res = await fetch(WEB3FORMS_ENDPOINT, {
+      const res  = await fetch(WEB3FORMS_ENDPOINT, {
         method:  'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body:    JSON.stringify(data)
       });
+      const json = await res.json();
 
-      if (res.ok) {
+      if (json.success) {
         form.reset();
         if (successMsg) {
-          successMsg.style.display = 'block';
-          successMsg.textContent   = 'Your message has been sent! We\'ll be in touch within 24 hours.';
+          successMsg.style.display    = 'block';
+          successMsg.style.background = '';
+          successMsg.style.color      = '';
+          successMsg.textContent      = 'Your message has been sent! We\'ll be in touch within 24 hours.';
           setTimeout(() => { successMsg.style.display = 'none'; }, 6000);
         }
       } else {
         if (successMsg) {
-          successMsg.style.display      = 'block';
-          successMsg.style.background   = '#fde8e8';
-          successMsg.style.color        = '#c0392b';
-          successMsg.textContent        = 'Sorry, something went wrong. Please email us directly at info@kitoboserenityresort.com';
+          successMsg.style.display    = 'block';
+          successMsg.style.background = '#fde8e8';
+          successMsg.style.color      = '#c0392b';
+          successMsg.textContent      = 'Sorry, something went wrong. Please email us directly at info@kitoboserenityresort.com';
         }
       }
     } catch {
