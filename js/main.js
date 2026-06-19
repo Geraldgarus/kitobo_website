@@ -280,39 +280,61 @@ function initRevealObserver() {
   });
 })();
 
-/* ─── CONTACT FORM (Web3Forms → info@kitoboserenityresort.com) ── */
+/* ─── CONTACT FORM (Formspree → info@kitoboserenityresort.com) ── */
 (function initContactForm() {
   const form       = document.getElementById('contactForm');
   const successMsg = document.getElementById('formSuccess');
   const submitBtn  = document.getElementById('submitBtn');
   if (!form) return;
 
-  /* Show success message if redirected back with ?sent=1 */
-  if (window.location.search.includes('sent=1') && successMsg) {
-    successMsg.style.display = 'block';
-    successMsg.style.background = '';
-    successMsg.style.color      = '';
-    successMsg.textContent = 'Your message has been sent! We\'ll be in touch within 24 hours.';
-    window.history.replaceState({}, '', window.location.pathname);
-  }
+  const ENDPOINT = 'https://formspree.io/f/mbdeeojq';
 
-  /* Set the combined name field before native submit */
-  form.addEventListener('submit', function (e) {
-    if (!form.checkValidity()) {
-      e.preventDefault();
-      form.reportValidity();
-      return;
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+
+    const btnText = submitBtn.querySelector('.btn-text');
+    submitBtn.disabled = true;
+    btnText.textContent = 'Sending…';
+
+    const data = new FormData();
+    data.append('name',    (form.fname.value + ' ' + form.lname.value).trim());
+    data.append('email',   form.email.value);
+    data.append('phone',   form.phone.value || '');
+    data.append('subject', form.querySelector('#subject').value || '');
+    data.append('dates',   form.dates.value || '');
+    data.append('message', form.message.value);
+    data.append('_replyto', form.email.value);
+
+    try {
+      const res = await fetch(ENDPOINT, {
+        method:  'POST',
+        headers: { 'Accept': 'application/json' },
+        body:    data
+      });
+
+      if (res.ok) {
+        form.reset();
+        successMsg.style.display    = 'block';
+        successMsg.style.background = '';
+        successMsg.style.color      = '';
+        successMsg.textContent      = 'Your message has been sent! We\'ll be in touch within 24 hours.';
+        setTimeout(() => { successMsg.style.display = 'none'; }, 6000);
+      } else {
+        successMsg.style.display    = 'block';
+        successMsg.style.background = '#fde8e8';
+        successMsg.style.color      = '#c0392b';
+        successMsg.textContent      = 'Sorry, something went wrong. Please email us directly at info@kitoboserenityresort.com';
+      }
+    } catch {
+      successMsg.style.display    = 'block';
+      successMsg.style.background = '#fde8e8';
+      successMsg.style.color      = '#c0392b';
+      successMsg.textContent      = 'Network error. Please email us at info@kitoboserenityresort.com';
+    } finally {
+      submitBtn.disabled  = false;
+      btnText.textContent = 'Send Message';
     }
-    /* Inject full name so Web3Forms receives a 'name' field */
-    let nameInput = form.querySelector('input[name="name"]');
-    if (!nameInput) {
-      nameInput = document.createElement('input');
-      nameInput.type = 'hidden';
-      nameInput.name = 'name';
-      form.appendChild(nameInput);
-    }
-    nameInput.value = (form.fname.value + ' ' + form.lname.value).trim();
-    /* Allow native form POST to proceed to Web3Forms */
   });
 
   /* Real-time validation */

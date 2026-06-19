@@ -117,12 +117,9 @@
           <h3 style="font-family:'Playfair Display',serif;font-size:1.8rem;margin:12px 0 8px;">How Can We Help?</h3>
           <div class="heading-line" style="margin-bottom:28px;"></div>
 
-          <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
-            <!-- Web3Forms config -->
-            <input type="hidden" name="access_key" value="5b5c3c22-2fad-4aac-bb12-89a642ce0c3c" />
-            <input type="hidden" name="from_name" value="Kitobo Serenity Resort Website" />
-            <input type="hidden" name="redirect" value="https://kitoboserenity-production.up.railway.app/contact.html?sent=1" />
-            <input type="checkbox" name="botcheck" style="display:none" />
+          <form class="contact-form" id="contactForm" novalidate>
+            <input type="hidden" name="_replyto" value="" />
+            <input type="text" name="_gotcha" style="display:none" />
             <div class="form-row">
               <div class="form-group">
                 <label for="fname">First Name *</label>
