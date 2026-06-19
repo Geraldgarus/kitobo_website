@@ -280,14 +280,14 @@ function initRevealObserver() {
   });
 })();
 
-/* ─── CONTACT FORM (Formspree → info@kitoboserenityresort.com) ── */
+/* ─── CONTACT FORM (Web3Forms → info@kitoboserenityresort.com) ── */
 (function initContactForm() {
   const form       = document.getElementById('contactForm');
   const successMsg = document.getElementById('formSuccess');
   const submitBtn  = document.getElementById('submitBtn');
   if (!form) return;
 
-  const ENDPOINT = 'https://formspree.io/f/mbdeeojq';
+  const ENDPOINT = 'https://api.web3forms.com/submit';
 
   form.addEventListener('submit', async function (e) {
     e.preventDefault();
@@ -298,22 +298,24 @@ function initRevealObserver() {
     btnText.textContent = 'Sending…';
 
     const data = new FormData();
-    data.append('name',    (form.fname.value + ' ' + form.lname.value).trim());
-    data.append('email',   form.email.value);
-    data.append('phone',   form.phone.value || '');
-    data.append('subject', form.querySelector('#subject').value || '');
-    data.append('dates',   form.dates.value || '');
-    data.append('message', form.message.value);
-    data.append('_replyto', form.email.value);
+    data.append('access_key', 'd61899ff-0d82-4f4c-823b-f5d3c6e64a37');
+    data.append('botcheck',   '');
+    data.append('name',       (form.fname.value + ' ' + form.lname.value).trim());
+    data.append('email',      form.email.value);
+    data.append('phone',      form.phone.value || '');
+    data.append('subject',    form.querySelector('#subject').value || '');
+    data.append('dates',      form.dates.value || '');
+    data.append('message',    form.message.value);
 
     try {
-      const res = await fetch(ENDPOINT, {
+      const res  = await fetch(ENDPOINT, {
         method:  'POST',
         headers: { 'Accept': 'application/json' },
         body:    data
       });
+      const json = await res.json();
 
-      if (res.ok) {
+      if (json.success) {
         form.reset();
         successMsg.style.display    = 'block';
         successMsg.style.background = '';
