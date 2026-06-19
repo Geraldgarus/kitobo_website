@@ -304,7 +304,9 @@ function initRevealObserver() {
     data.append('email',      form.email.value);
     data.append('phone',      form.phone.value || '');
     data.append('subject',    form.querySelector('#subject').value || '');
-    data.append('dates',      form.dates.value || '');
+    const checkin  = form.checkin  ? form.checkin.value  : '';
+    const checkout = form.checkout ? form.checkout.value : '';
+    data.append('dates', checkin && checkout ? checkin + ' to ' + checkout : checkin || checkout || '');
     data.append('message',    form.message.value);
 
     try {
@@ -338,6 +340,18 @@ function initRevealObserver() {
       btnText.textContent = 'Send Message';
     }
   });
+
+  /* Set min date to today for date pickers */
+  const today = new Date().toISOString().split('T')[0];
+  const checkinInput  = document.getElementById('checkin');
+  const checkoutInput = document.getElementById('checkout');
+  if (checkinInput)  checkinInput.min  = today;
+  if (checkoutInput) checkoutInput.min = today;
+  if (checkinInput && checkoutInput) {
+    checkinInput.addEventListener('change', () => {
+      checkoutInput.min = checkinInput.value || today;
+    });
+  }
 
   /* Real-time validation */
   form.querySelectorAll('input, textarea, select').forEach(input => {
