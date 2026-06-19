@@ -300,23 +300,14 @@ function initRevealObserver() {
     submitBtn.disabled = true;
     btnText.textContent = 'Sending…';
 
-    /* Build payload */
-    const data = {
-      access_key: '5b5c3c22-2fad-4aac-bb12-89a642ce0c3c',
-      botcheck:   false,
-      name:    (form.fname.value + ' ' + form.lname.value).trim(),
-      email:   form.email.value,
-      phone:   form.phone ? form.phone.value : '',
-      subject: form.subject ? form.subject.value : '',
-      dates:   form.dates ? form.dates.value : '',
-      message: form.message.value
-    };
+    /* Build payload using FormData — picks up hidden inputs automatically */
+    const formData = new FormData(form);
+    formData.set('name', (form.fname.value + ' ' + form.lname.value).trim());
 
     try {
       const res  = await fetch(WEB3FORMS_ENDPOINT, {
-        method:  'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body:    JSON.stringify(data)
+        method: 'POST',
+        body:   formData
       });
       const json = await res.json();
 
