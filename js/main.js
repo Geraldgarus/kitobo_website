@@ -287,58 +287,32 @@ function initRevealObserver() {
   const submitBtn  = document.getElementById('submitBtn');
   if (!form) return;
 
-  const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit';
+  /* Show success message if redirected back with ?sent=1 */
+  if (window.location.search.includes('sent=1') && successMsg) {
+    successMsg.style.display = 'block';
+    successMsg.style.background = '';
+    successMsg.style.color      = '';
+    successMsg.textContent = 'Your message has been sent! We\'ll be in touch within 24 hours.';
+    window.history.replaceState({}, '', window.location.pathname);
+  }
 
-  form.addEventListener('submit', async function (e) {
-    e.preventDefault();
+  /* Set the combined name field before native submit */
+  form.addEventListener('submit', function (e) {
     if (!form.checkValidity()) {
+      e.preventDefault();
       form.reportValidity();
       return;
     }
-
-    const btnText = submitBtn.querySelector('.btn-text');
-    submitBtn.disabled = true;
-    btnText.textContent = 'Sending…';
-
-    /* Build payload using FormData — picks up hidden inputs automatically */
-    const formData = new FormData(form);
-    formData.set('name', (form.fname.value + ' ' + form.lname.value).trim());
-
-    try {
-      const res  = await fetch(WEB3FORMS_ENDPOINT, {
-        method: 'POST',
-        body:   formData
-      });
-      const json = await res.json();
-
-      if (json.success) {
-        form.reset();
-        if (successMsg) {
-          successMsg.style.display    = 'block';
-          successMsg.style.background = '';
-          successMsg.style.color      = '';
-          successMsg.textContent      = 'Your message has been sent! We\'ll be in touch within 24 hours.';
-          setTimeout(() => { successMsg.style.display = 'none'; }, 6000);
-        }
-      } else {
-        if (successMsg) {
-          successMsg.style.display    = 'block';
-          successMsg.style.background = '#fde8e8';
-          successMsg.style.color      = '#c0392b';
-          successMsg.textContent      = 'Sorry, something went wrong. Please email us directly at info@kitoboserenityresort.com';
-        }
-      }
-    } catch {
-      if (successMsg) {
-        successMsg.style.display    = 'block';
-        successMsg.style.background = '#fde8e8';
-        successMsg.style.color      = '#c0392b';
-        successMsg.textContent      = 'Network error. Please email us at info@kitoboserenityresort.com';
-      }
-    } finally {
-      submitBtn.disabled  = false;
-      btnText.textContent = 'Send Message';
+    /* Inject full name so Web3Forms receives a 'name' field */
+    let nameInput = form.querySelector('input[name="name"]');
+    if (!nameInput) {
+      nameInput = document.createElement('input');
+      nameInput.type = 'hidden';
+      nameInput.name = 'name';
+      form.appendChild(nameInput);
     }
+    nameInput.value = (form.fname.value + ' ' + form.lname.value).trim();
+    /* Allow native form POST to proceed to Web3Forms */
   });
 
   /* Real-time validation */
