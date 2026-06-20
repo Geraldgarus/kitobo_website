@@ -1109,6 +1109,7 @@ p  { color: var(--text-muted); line-height: 1.8; }
   transition: all var(--speed) var(--ease);
 }
 .social-link:hover { background: var(--gold); transform: translateY(-3px); }
+.social-link i { font-size: 1rem; color: var(--white); line-height: 1; }
 .footer h4 {
   color: var(--white);
   font-size: 0.82rem;
