@@ -1135,6 +1135,7 @@ p  { color: var(--text-muted); line-height: 1.8; }
 }
 .footer-contact-item a { color: rgba(255,255,255,0.62); transition: color 0.25s; }
 .footer-contact-item a:hover { color: var(--gold-light); }
+.footer-contact-item i { color: var(--gold-light); width: 16px; text-align: center; flex-shrink: 0; }
 .footer-bottom {
   border-top: 1px solid rgba(255,255,255,0.1);
   padding: 28px 0;
