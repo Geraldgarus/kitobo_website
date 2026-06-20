@@ -455,6 +455,7 @@ p  { color: var(--text-muted); line-height: 1.8; }
 .feature-icon {
   font-size: 1.8rem;
   flex-shrink: 0;
+  color: var(--gold);
 }
 .feature-text strong {
   display: block;
@@ -777,7 +778,7 @@ p  { color: var(--text-muted); line-height: 1.8; }
   transition: transform var(--speed) var(--ease), box-shadow var(--speed) var(--ease);
 }
 .menu-card:hover { transform: translateY(-6px); box-shadow: var(--shadow); }
-.menu-card-icon { font-size: 2.2rem; margin-bottom: 14px; }
+.menu-card-icon { font-size: 2.2rem; margin-bottom: 14px; color: var(--green); }
 .menu-card h4 { margin-bottom: 8px; }
 .menu-card p  { font-size: 0.85rem; }
 
@@ -921,6 +922,8 @@ p  { color: var(--text-muted); line-height: 1.8; }
   transition: background var(--speed) var(--ease);
 }
 .value-card:hover .value-icon { background: var(--green); }
+.value-icon i { color: var(--green); }
+.value-card:hover .value-icon i { color: var(--white); }
 .value-card h4 { margin-bottom: 10px; }
 .value-card p  { font-size: 0.88rem; }
 
@@ -940,6 +943,7 @@ p  { color: var(--text-muted); line-height: 1.8; }
   margin-bottom: 18px;
   display: block;
 }
+.event-card-icon i { color: var(--green); }
 .event-card h4 { margin-bottom: 10px; color: var(--green-dark); }
 .event-card p  { font-size: 0.88rem; line-height: 1.65; }
 
