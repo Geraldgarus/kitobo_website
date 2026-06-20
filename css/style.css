@@ -988,6 +988,8 @@ p  { color: var(--text-muted); line-height: 1.8; }
   transition: background var(--speed) var(--ease);
 }
 .contact-card:hover .contact-card-icon { background: var(--green); }
+.contact-card-icon i { font-size: 1.4rem; color: var(--green); transition: color var(--speed) var(--ease); }
+.contact-card:hover .contact-card-icon i { color: var(--white); }
 .contact-card-body h4 { margin-bottom: 5px; font-size: 1rem; }
 .contact-card-body a,
 .contact-card-body p  { font-size: 0.88rem; color: var(--text-muted); }
