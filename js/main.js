@@ -45,7 +45,7 @@ const navLinks  = document.getElementById('navLinks');
 if (navLinks && !navLinks.querySelector('.nav-mobile-header')) {
   const header = document.createElement('div');
   header.className = 'nav-mobile-header';
-  header.innerHTML = '<img src="images/logo3.png" alt="Kitobo" class="nav-mobile-logo" />' +
+  header.innerHTML = '<img src="images/logo.png" alt="Kitobo" class="nav-mobile-logo" />' +
     '<button class="nav-mobile-close" aria-label="Close menu">✕</button>';
   navLinks.insertBefore(header, navLinks.firstChild);
 }
