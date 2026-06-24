@@ -1104,7 +1104,7 @@ p  { color: var(--text-muted); line-height: 1.8; }
   width: auto;
   object-fit: contain;
   margin-bottom: 18px;
-  filter: brightness(0) invert(1);
+  filter: none;
 }
 .footer-brand p { font-size: 0.88rem; line-height: 1.75; color: rgba(255,255,255,0.62); margin-bottom: 24px; }
 .social-links { display: flex; gap: 10px; }
@@ -1582,7 +1582,7 @@ p  { color: var(--text-muted); line-height: 1.8; }
   }
   .nav-mobile-logo {
     height: 44px;
-    filter: brightness(0) invert(1);
+    filter: none;
   }
   .nav-mobile-close {
     width: 36px; height: 36px;
